@@ -6,3 +6,4 @@
 
 ### Simulation Slow Subscriber
 ![ss-slow-subscriber](assets/images/ss-slow-subscriber.png)
+> Peak queue saya adalah 26, hal ini dikarenakan saya melakukan run pada publisher sebanyak 6 kali, dan setiap publisher dirun ia akan mengirim 5 message pada rabbitmq. Jadi totalnya adalah 30 message yang dikirim secara bersamaan, namun karena mensimulasikan slow subscriber dengan sleep thread, jadi setiap message yang dikirim akan diproses secara lambat oleh subscriber nya, karena itu ada 26 message yang ada di queue yang belum diterima subscriber.
